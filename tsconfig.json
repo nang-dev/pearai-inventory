@@ -5,11 +5,16 @@
     "outDir": "out",
     "lib": ["es2020", "dom"],
     "sourceMap": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "/*": ["*"]
+    },
+    "resolveJsonModule": true,
   },
   "exclude": ["node_modules", ".vscode-test"]
 }

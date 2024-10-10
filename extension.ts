@@ -1,9 +1,8 @@
 import * as vscode from 'vscode';
-import { getNonce } from './getNonce';
+import { getNonce } from './util/getNonce';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Activating pearai-inventory extension...');
-
 
     let helloWorldDisposable = vscode.commands.registerCommand('pearai-inventory.helloWorld', () => {
         console.log('Hello World command executed');

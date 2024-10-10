@@ -87,3 +87,36 @@ vscode-dropdown,
 vscode-checkbox {
     margin-bottom: 10px;
 }
+
+.inventory-container {
+    display: flex;
+    height: 100vh;
+  }
+
+  .tool-list {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .tool-details {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .tool-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .vscode-divider {
+    width: 1px;
+    background-color: var(--vscode-editor-foreground);
+    opacity: 0.2;
+  }

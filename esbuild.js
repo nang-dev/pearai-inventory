@@ -12,7 +12,7 @@ const commonOptions = {
 // Build extension
 esbuild.build({
   ...commonOptions,
-  entryPoints: ['./src/extension.ts'],
+  entryPoints: ['./extension.ts'],
   outfile: 'out/extension.js',
   format: 'cjs',
   platform: 'node',
@@ -23,8 +23,8 @@ esbuild.build({
 // Build webview
 esbuild.build({
   ...commonOptions,
-  entryPoints: ['./src/inventory.tsx'],
-  outfile: 'out/inventory.js',
+  entryPoints: ['./gui/src/pages/Inventory.tsx'],
+  outfile: 'out/Inventory.js',
   format: 'iife',
   platform: 'browser',
   target: ['es2020'],
@@ -36,14 +36,6 @@ esbuild.build({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
   },
   plugins: [
-    {
-      name: 'resolve-vscode-webview-ui-toolkit',
-      setup(build) {
-        build.onResolve({ filter: /@vscode\/webview-ui-toolkit/ }, args => {
-          return { path: path.resolve('./node_modules/@vscode/webview-ui-toolkit/dist/toolkit.js') };
-        });
-      },
-    },
   ],
 }).then(() => console.log('Webview build complete'))
   .catch(() => process.exit(1));
