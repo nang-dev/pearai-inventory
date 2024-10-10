@@ -1,0 +1,71 @@
+[
+    {
+      "id": "1",
+      "name": "AI Code Assistant",
+      "description": "AI-powered code completion and suggestion tool",
+      "isActive": false,
+      "version": "1.2.0",
+      "author": "OpenAI",
+      "website": "https://openai.com/blog/openai-codex/",
+      "settings": [
+        {
+          "name": "Enable autocomplete",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "Suggestion confidence threshold",
+          "type": "number",
+          "default": 0.7,
+          "min": 0,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "AI Test Generator",
+      "description": "Automatically generate unit tests using AI",
+      "isActive": false,
+      "version": "0.9.5",
+      "author": "TestAI Inc.",
+      "website": "https://testai.example.com",
+      "settings": [
+        {
+          "name": "Test framework",
+          "type": "select",
+          "options": ["Jest", "Mocha", "Pytest"],
+          "default": "Jest"
+        },
+        {
+          "name": "Coverage target",
+          "type": "number",
+          "default": 80,
+          "min": 0,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "AI Documentation Helper",
+      "description": "AI-assisted documentation generation for your code",
+      "isActive": false,
+      "version": "2.1.3",
+      "author": "DocuMind",
+      "website": "https://documind.example.com",
+      "settings": [
+        {
+          "name": "Documentation style",
+          "type": "select",
+          "options": ["Google", "NumPy", "reST"],
+          "default": "Google"
+        },
+        {
+          "name": "Include examples",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    }
+  ]
